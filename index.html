@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="text-start font-bold mb-10">Bé tập tính</h1>
+      <div class="grid grid-cols-3 gap-3 my-3" id="app-container">
+        <div class="col-span-2 text-start grid grid-rows-3">
+          <div class="form-group grid grid-cols-3 gap-1 my-2">
+            <label for="first-number-input" class="text-sm font-semibold"
+              >Số thứ nhất</label
+            >
+            <input
+              type="number"
+              class="border-slate-300 border-2 col-span-2"
+              id="first-number-input"
+              placeholder="Hãy nhập một số"
+            />
+          </div>
+          <div class="form-group grid grid-cols-3 gap-1 my-2">
+            <label for="second-number-input" class="text-sm font-semibold"
+              >Số thứ hai</label
+            >
+            <input
+              class="border-slate-300 border-2 col-span-2"
+              type="number"
+              id="second-number-input"
+              placeholder="Hãy nhập một số"
+            />
+          </div>
+          <div class="form-group grid grid-cols-3 gap-1 my-2">
+            <span for="second-number-input" class="text-sm font-semibold"
+              >Kết quả</span
+            >
+            <input
+              class="border-slate-300 border-2 col-span-2 read-only"
+              id="result-input"
+              disabled
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 grid-rows-3 gap-5">
+          <div class="form-group grid grid-cols-2 gap-1 my-2">
+            <input type="radio" id="plus-operator" />
+            <label for="plus-operator" class="text-sm font-semibold"
+              >Cộng</label
+            >
+          </div>
+          <div class="form-group grid grid-cols-2 gap-1 my-2">
+            <input type="radio" id="subtract-operator" value="subtract" />
+            <label for="subtract-operator" class="text-sm font-semibold"
+              >Trừ</label
+            >
+          </div>
+          <div class="form-group grid grid-cols-2 gap-1 my-2">
+            <input type="radio" id="multi-operator" value="multi" />
+            <label for="multi-operator" class="text-sm font-semibold"
+              >Nhân</label
+            >
+          </div>
+          <div class="form-group grid grid-cols-2 gap-1 my-2">
+            <input type="radio" id="divine-operator" value="divine" />
+            <label for="divine-operator" class="text-sm font-semibold"
+              >Chia</label
+            >
+          </div>
+
+          <button
+            class="text-sm font-semibold border-2 border-slate-400 px-2 mb-3 rounded-full"
+            id="calculate-btn"
+          >
+            Tính
+          </button>
+        </div>
+        <div class="col-span-3 grid grid-cols-9 gap-1 text-start">
+          <span class="text-sm font-semibold col-span-2">Thông báo</span>
+          <span
+            class="text-sm text-red-600 font-semibold col-span-7 ml-1"
+            id="notification"
+          ></span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
